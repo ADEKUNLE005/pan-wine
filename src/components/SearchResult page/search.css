@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-main {
+  display: inline-flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  margin-left: 4.4%;
+  margin-right: 4.4%;
+  margin-bottom: 128px;
+}
+.wine-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+.sb-main {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid rgba(34, 34, 34, 0.3);
+}
+
+.sb-main-p1 {
+  display: flex;
+  color: #222;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  flex: 1 0 0;
+  line-height: 20px; /* 142.857% */
+}
+.pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.wine-btn {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 24px;
+  background: #f9e3f0;
+  color: #411530;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
