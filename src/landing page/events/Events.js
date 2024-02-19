@@ -1,20 +1,196 @@
-import React, { useState } from "react";
+import React from "react";
+import { EventCard } from "./EventCard";
 import "./Events.css";
+export const data = [
+  {
+    id: "1",
+    name: "food 1",
+    amount: 1200,
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imageb.png",
+    qty: 1,
+  },
+
+  {
+    id: "2",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+  {
+    id: "3",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "4",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "5",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "6",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "7",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "8",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+  {
+    id: "9",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "10",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+  {
+    id: "11",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+  {
+    id: "12",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+  {
+    id: "13",
+    name: "food 1",
+    amount: 1200,
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "14",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+
+  {
+    id: "15",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: 1,
+  },
+  {
+    id: "16",
+    name: "food 1",
+    amount: "1200",
+    title: "Clear springs",
+    description: "Clear springs",
+    image: "/images/Imagec.png",
+    qty: "1",
+  },
+];
+
 function Events() {
+
   return (
     <div className="events-main">
       <h1 className="events-p1">New Arrivals</h1>
-      <EventContainer />
+      <div className="events-containerb">
+        {data?.map((item) => {
+          return (
+            <EventCard
+              image={item.image}
+              amount={item.amount}
+              title={item.title}
+              description={item.description}
+              qty={item.qty}
+              ite={item}
+            />
+          );
+        })}
+      </div>
       <h1 className="events-p1">Top Exotics</h1>
       <div className="events-containerb">
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
-        <EventCard image={"../../../images/Imagec.png"} />
+        {/* <EventCard image={""} /> */}
+        {data.map((item) => {
+          return (
+            <EventCard
+              image={item.image}
+              amount={item.amount}
+              title={item.title}
+              description={item.description}
+              qty={item.qty}
+              ite={item}
+            />
+          );
+        })}
 
         <div className="search">
           <p className="v-para">view more</p>
@@ -26,74 +202,6 @@ function Events() {
 }
 
 export default Events;
-
-export function EventCard({ image, coun }) {
-  const [count, setCount] = useState(false);
-
-  const increasecount = () => {
-    setCount((count) => count + 100);
-  };
-  function decreaseCount() {
-    setCount((count) => (count > 0 ? count - 100 : count - 0));
-  }
-  return (
-    <div className="events-card-main">
-      <img src={image} alt="Event displayed" className="event-image" />
-      <div className="events-card-box1">
-        <p className="card-p1">Clear Springs</p>
-        <p className="card-p2">Clear Springs</p>
-      </div>
-      <div className="events-card-box2">
-        <div className="counter">
-          <div className="minus" onClick={decreaseCount}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M5 12H19"
-                stroke="#411530"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div className="number">100</div>
-          <div className="plus" onClick={increasecount}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M12 5V19M5 12H19"
-                stroke="#411530"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div className="price">
-          <div className="naira">₦</div>
-          <div className="naira">{count}
-          {count <=0 ? 0 : null}
-          
-          .00
-          
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function EventContainer() {
   return (
@@ -113,3 +221,5 @@ export function EventContainer() {
     </div>
   );
 }
+
+

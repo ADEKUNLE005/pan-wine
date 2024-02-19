@@ -6,7 +6,7 @@ import Search from "../components/SearchResult page/Search";
 function Result() {
   return (
     <div>
-      <Navbar shop={"/shoppingb"} />
+      <Navbar shop={"/shoppinga"} />
       <Search />
 
       <Footer />

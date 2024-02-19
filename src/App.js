@@ -1,16 +1,17 @@
-import React, { createContext, useState } from "react";
-
+import React, { createContext, useState ,useReducer, Children} from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { data } from "./landing page/events/Events";
 import "./App.css";
 import { Outlet, ScrollRestoration } from "react-router-dom";
-export const countContext = createContext(null);
+
 function App() {
-  const [count, setCount] = useState(0);
   return (
     <div className="App">
-      <countContext.Provider value={{ count, setCount }}>
-        <Outlet />
-        <ScrollRestoration />
-      </countContext.Provider>
+      <ToastContainer />
+            <Outlet/>
+      <ScrollRestoration />
+   
     </div>
   );
 }

@@ -52,7 +52,8 @@ function Cartb() {
         <div className="cb-box4">
           <p className="cb-p3">GRAND TOTAL</p>
           <p className="cb-p3" id="cd-p5">
-            $3800
+            cart.cartTotalAmount
+            
           </p>
         </div>
 <Link to={"/shipping"} className="cb-l">

@@ -52,12 +52,30 @@
   height: 302px;
   border-radius: 16px;
 }
-
+.cl-l {
+  display: flex;
+  text-decoration: none;
+  background-color: rgb(236, 248, 250);
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: 2px solid black;
+  width: 100px;
+  height: 25px;
+}
+.add-c {
+  background-color: #411530;
+  width: 100px;
+  height: 25px;
+}
 .events-card-box1 {
   display: flex;
   width: 100%;
-  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: flex-start;
+  padding: 4px;
   gap: 4px;
 }
 
@@ -152,8 +170,7 @@
   height: 29px;
 }
 
-.minus,
-.plus {
+.minus , .plus{
   border-radius: 8px;
   background: #f9e3f0;
   display: flex;
@@ -163,3 +180,4 @@
   justify-content: center;
   align-items: center;
 }
+

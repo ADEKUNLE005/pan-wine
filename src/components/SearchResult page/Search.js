@@ -1,5 +1,7 @@
 import React from "react";
 import "./search.css";
+import { data } from "../../landing page/events/Events";
+import { EventCard } from "../../landing page/events/EventCard";
 import Button from "../../Button/Button";
 import { EventContainer } from "../../landing page/events/Events";
 function Search() {
@@ -22,7 +24,21 @@ function Search() {
         </div>
         <SearchButton para={"Filter"} />
       </div>
-      <EventContainer />
+
+      <div className="events-containerb">
+        {data.map((item) => {
+          return (
+            <EventCard
+              image={item.image}
+              amount={item.amount}
+              title={item.title}
+              description={item.description}
+              qty={item.qty}
+              ite={item}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -6,6 +6,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+.cc-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.c-tt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
 .cnav-container {
   display: flex;
   width: 100%;
@@ -89,4 +101,30 @@
   font-style: normal;
   font-weight: 600;
   line-height: 36px; /* 112.5% */
+}
+
+.ca-bn {
+  width: 500px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #411530;
+  align-self: center;
+  color: #fff;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  /* display: flex; */
+  /* margin-left: 30%; */
+
+}
+
+.l-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 64px;
+  justify-content: center;
 }
